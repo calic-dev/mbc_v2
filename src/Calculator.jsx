@@ -251,6 +251,8 @@ const allQuestions = {
   ],
 };
 
+import { motion, AnimatePresence } from "framer-motion";
+
 const Calculator = () => {
   const [step, setStep] = useState(0);
   const [problem, setProblem] = useState("");
@@ -335,7 +337,7 @@ const Calculator = () => {
     return (
       <div className="p-4 text-center">
         <h2 className="text-xl font-bold mb-4">Rezultat</h2>
-        <p>{result}</p>
+        <p className="mb-4">{result}</p><a href="https://tally.so/r/nGKy1o" target="_blank" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">Ispuni upitnik i rezerviraj svoj termin</a>
         <button
           className="mt-4 bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
           onClick={() => {
@@ -354,7 +356,16 @@ const Calculator = () => {
   const currentQuestion = allQuestions[problem][step];
 
   return (
-    <div className="p-4 max-w-xl mx-auto">
+    <div className="p-4 max-w-xl mx-auto text-center space-y-6">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={step}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.3 }}
+        >
+      <div className="text-sm text-gray-500 mb-1">Pitanje {step + 1} od {allQuestions[problem].length}</div>
       <h2 className="text-lg font-semibold mb-3">
         {step + 1}. {currentQuestion.question}
       </h2>
@@ -369,6 +380,29 @@ const Calculator = () => {
           </button>
         ))}
       </div>
+
+      {step < allQuestions[problem].length - 1 && (
+        <div className="text-xs text-gray-400 italic mt-6">
+          Sljedeće:{" "}
+          <span className="opacity-80">
+            {
+              allQuestions[problem][step + 1].question
+                .split(" ")
+                .slice(0, 2)
+                .join(" ")
+            }
+            <span className="opacity-40">
+              {" "}
+              {
+                allQuestions[problem][step + 1].question
+                  .split(" ")
+                  .slice(2)
+                  .join(" ")
+              }
+            </span>
+          </span>
+        </div>
+      )}
     </div>
   );
 };
