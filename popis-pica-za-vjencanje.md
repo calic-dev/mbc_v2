@@ -18,7 +18,7 @@
 ## Vino (Andrija)
 | # | Stavka | Pakiranje | Količina |
 |---|--------|-----------|----------|
-| 6 | Andrija Graševina | 0,7 l | 10 kartona |
+| 6 | Kutjevo Graševina | 0,7 l | 10 kartona |
 | 7 | Andrija Blatina | 0,7 l | 4 kartona |
 | 8 | Andrija Žilavka | 0,7 l | 4 kartona |
 

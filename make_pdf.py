@@ -29,7 +29,7 @@ data = {
                ["3", "Juicy Sok 100% jabuka", "1 l", "10 komada"]],
     "Pivo": [["4", "Heineken pivo", "0,4 l", "5 gajbi"],
              ["5", "Žuja pivo", "0,5 l", "5 gajbi"]],
-    "Vino (Andrija)": [["6", "Andrija Graševina", "0,7 l", "10 kartona"],
+    "Vino (Andrija)": [["6", "Kutjevo Graševina", "0,7 l", "10 kartona"],
                        ["7", "Andrija Blatina", "0,7 l", "4 kartona"],
                        ["8", "Andrija Žilavka", "0,7 l", "4 kartona"]],
     "Žestoko": [["9", "Jack Daniel's", "0,7 l", "3 paketa"],
