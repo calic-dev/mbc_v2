@@ -17,11 +17,11 @@ LINE = colors.HexColor("#cccccc")
 
 styles = getSampleStyleSheet()
 h1 = ParagraphStyle("h1", parent=styles["Title"], fontName="DejaVu-Bold",
-                    textColor=WINE, fontSize=22, alignment=TA_CENTER, spaceAfter=2)
+                    textColor=WINE, fontSize=17, alignment=TA_CENTER, spaceAfter=1)
 sub = ParagraphStyle("sub", parent=styles["Normal"], fontName="DejaVu",
-                     textColor=colors.grey, fontSize=11, alignment=TA_CENTER, spaceAfter=18)
+                     textColor=colors.grey, fontSize=9, alignment=TA_CENTER, spaceAfter=8)
 h2 = ParagraphStyle("h2", parent=styles["Heading2"], fontName="DejaVu-Bold",
-                    textColor=WINE, fontSize=14, spaceBefore=14, spaceAfter=4)
+                    textColor=WINE, fontSize=11, spaceBefore=7, spaceAfter=2)
 
 data = {
     "Sokovi": [["1", "Senzacija", "2 l", "3 paketa"],
@@ -43,8 +43,8 @@ data = {
 }
 
 doc = SimpleDocTemplate("/home/user/mbc_v2/popis-pica-za-vjencanje.pdf", pagesize=A4,
-                        topMargin=22*mm, bottomMargin=18*mm,
-                        leftMargin=20*mm, rightMargin=20*mm)
+                        topMargin=12*mm, bottomMargin=10*mm,
+                        leftMargin=18*mm, rightMargin=18*mm)
 elems = [Paragraph("Popis pića za vjenčanje", h1),
          Paragraph("Popis pića i količina", sub)]
 
@@ -56,14 +56,14 @@ for cat, rows in data.items():
     style = [
         ("FONTNAME", (0, 0), (-1, -1), "DejaVu"),
         ("FONTNAME", (0, 0), (-1, 0), "DejaVu-Bold"),
-        ("FONTSIZE", (0, 0), (-1, -1), 10),
+        ("FONTSIZE", (0, 0), (-1, -1), 9),
         ("TEXTCOLOR", (0, 0), (-1, 0), WINE),
         ("BACKGROUND", (0, 0), (-1, 0), HEADBG),
         ("GRID", (0, 0), (-1, -1), 0.5, LINE),
         ("ALIGN", (0, 0), (0, -1), "CENTER"),
         ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
-        ("TOPPADDING", (0, 0), (-1, -1), 5),
-        ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+        ("TOPPADDING", (0, 0), (-1, -1), 2.5),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 2.5),
         ("LEFTPADDING", (0, 0), (-1, -1), 7),
     ]
     for i in range(1, len(table_data)):
