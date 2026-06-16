@@ -25,8 +25,8 @@ h2 = ParagraphStyle("h2", parent=styles["Heading2"], fontName="DejaVu-Bold",
 
 data = {
     "Sokovi": [["1", "Senzacija", "2 l", "3 paketa"],
-               ["2", "Juicy Sok 100% naranča", "1 l", "30 litara"],
-               ["3", "Juicy Sok 100% jabuka", "1 l", "10 litara"]],
+               ["2", "Juicy Sok 100% naranča", "1 l", "30 komada"],
+               ["3", "Juicy Sok 100% jabuka", "1 l", "10 komada"]],
     "Pivo": [["4", "Heineken pivo", "0,4 l", "5 gajbi"],
              ["5", "Žuja pivo", "0,5 l", "5 gajbi"]],
     "Vino (Andrija)": [["6", "Andrija Graševina", "0,7 l", "10 kartona"],

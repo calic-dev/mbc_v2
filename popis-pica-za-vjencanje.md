@@ -6,8 +6,8 @@
 | # | Stavka | Pakiranje | Količina |
 |---|--------|-----------|----------|
 | 1 | Senzacija | 2 l | 3 paketa |
-| 2 | Juicy Sok 100% naranča | 1 l | 30 litara |
-| 3 | Juicy Sok 100% jabuka | 1 l | 10 litara |
+| 2 | Juicy Sok 100% naranča | 1 l | 30 komada |
+| 3 | Juicy Sok 100% jabuka | 1 l | 10 komada |
 
 ## Pivo
 | # | Stavka | Pakiranje | Količina |
